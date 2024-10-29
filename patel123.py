@@ -159,7 +159,7 @@ def show_feature_options(message):
     feature_options = telebot.types.InlineKeyboardMarkup()
     feature_options.add(
         telebot.types.InlineKeyboardButton('BGMI', callback_data='feature_bgmi'),
-        telebot.types.InlineKeyboardButton('AI generate generate', callback_data='feature_ai')
+        telebot.types.InlineKeyboardButton('AI generate', callback_data='feature_ai')
     )
     bot.send_message(message.chat.id, "Select an option:" if user_language.get(message.chat.id) == 'en' else "एक विकल्प चुनें:", reply_markup=feature_options)
 
